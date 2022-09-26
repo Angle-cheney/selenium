@@ -3,7 +3,10 @@ import unittest
 from selenium import webdriver
 from EveryPage.SearchPage import Search
 import warnings
-
+"""
+业务层：真正的测试用例的操作，用例的业务逻辑以实现，调用页面层中的方法
+根据业务逻辑，需要哪些操作，直接调用即可。
+"""
 
 class alins(unittest.TestCase):
     def setUp(self):
@@ -21,6 +24,11 @@ class alins(unittest.TestCase):
         s.switch_alins_window0()
         print('Test OK')
         print('Test _lable1 OK')
+
+        try:
+            self.assertEqual(u"1234_百度搜索", self.driver.title)
+        except AssertionError as e:
+            print (u"找不到这个标题")
         s.close_windows()
 
     def test_lable2(self):

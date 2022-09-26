@@ -3,7 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains   #鼠标操作
 from time import sleep
 import os
 class BasePage():
-    '''BasePage封装所有界面都公用的方法。例如driver,find_element等'''
+    '''基础层：BasePage封装所有界面都公用的方法。例如driver,find_element,click等'''
     '''实例化BasePage类时，事先执行的__init__方法，该方法需要传递参数'''
     def __init__(self,driver,url):
         self.driver = driver

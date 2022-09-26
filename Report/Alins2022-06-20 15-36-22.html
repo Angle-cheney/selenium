@@ -7159,34 +7159,41 @@ body.skin-3 {
 
 
     var resultData = {
-    "testPass": 2,
+    "testPass": 1,
     "testResult": [
         {
             "className": "alins",
             "methodName": "test_lable1",
             "description": "一级标签",
-            "spendTime": "4.83 s",
-            "status": "成功",
+            "spendTime": "3.43 s",
+            "status": "错误",
             "log": [
-                ""
+                "Test OK\nTest _lable1 OK\n",
+                "Traceback (most recent call last):\n",
+                "  File \"D:\\Python\\lib\\unittest\\case.py\", line 59, in testPartExecutor\n    yield\n",
+                "  File \"D:\\Python\\lib\\unittest\\case.py\", line 592, in run\n    self._callTestMethod(testMethod)\n",
+                "  File \"D:\\Python\\lib\\unittest\\case.py\", line 550, in _callTestMethod\n    method()\n",
+                "  File \"C:\\Users\\LuckyHo\\PycharmProjects\\pythonProject1\\Case\\AlinsHome.py\", line 25, in test_lable1\n    self.driver.assertEqual(u\"123_百度搜索\",self.driver.title)\n",
+                "AttributeError: 'WebDriver' object has no attribute 'assertEqual'\n"
             ]
         },
         {
             "className": "alins",
             "methodName": "test_lable2",
             "description": "二级标签",
-            "spendTime": "10.4 s",
+            "spendTime": "9.05 s",
             "status": "成功",
             "log": [
+                "Test _lable2 OK",
                 ""
             ]
         }
     ],
     "testName": "学员端",
     "testAll": 2,
-    "testFail": 0,
-    "beginTime": "2022-06-17 13:27:08",
-    "totalTime": "20s",
+    "testFail": 1,
+    "beginTime": "2022-06-20 15:36:22",
+    "totalTime": "16s",
     "testSkip": 0,
     "testError": 0
 };

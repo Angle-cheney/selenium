@@ -1,5 +1,6 @@
 '''
-实现步骤:(1)继承basepage,(2)元素传参,(3)调取方法
+页面层：存放一些封装好的功能用例模块，继承基础层中的操作
+实现步骤:(1)继承基础层basepage,(2)元素传参,(3)调取方法
 '''
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains   #鼠标操作
