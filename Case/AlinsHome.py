@@ -12,6 +12,7 @@ class alins(unittest.TestCase):
         self.driver.implicitly_wait(10)
 
 
+
     def test_lable1(self):
         """一级标签"""
         url="http://alins.ele.me"
@@ -30,7 +31,7 @@ class alins(unittest.TestCase):
         s = Search(self.driver,url)
         s.open_alins()
         s.Actionchains_click1()
-        s.img()
+        s.img("二级标签")
         s.click_two1()
         s.switch_alins_window0()
         s.Actionchains_click2()
